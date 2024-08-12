@@ -1,4 +1,4 @@
-## CostManager
+## Proyecto-CostManager
 SW para realizar control de los gastos del mes, SW creado usando el framework Laravel version 10.x
 
 ## Funciones del SW
