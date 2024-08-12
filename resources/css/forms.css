@@ -1,0 +1,25 @@
+.form-style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.label-text{
+    font-size: 1.4rem;
+}
+
+.input-text{
+    font-size: 1.4rem;
+    height: 50px;
+    width: 20%;
+    color: #333333;
+}
+
+.input-select{
+    font-size: 1.4rem;
+    height: 50px;
+    width: 100%;
+    color: #333333;
+    text-align: center;
+}

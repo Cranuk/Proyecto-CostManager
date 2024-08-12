@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #f9f7f3;
+    font-family: "Amaranth", sans-serif;
+}
+
+body{
+    background-color: #003849;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.space-5{
+    margin-top: 5px;
+}
+
+.space-10{
+    margin-top: 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+.icon-head{
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.icon-small{
+    font-size: 1.5rem;
+}
+
+.icon-medium{
+    font-size: 2rem;
+}
+
+.icon-big{
+    font-size: 4rem;
+}
+
+.container{
+    width: 100vw;
+}
+
+.container-content{
+    padding: 0 10px;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.subtitle{
+    font-size: 1.8rem;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.button-box{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons{
+    width: fit-content;
+    padding: 10px;
+    color: #fcfaf9;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: box-shadow 0.3s;
+}
+
+.button-red{
+    background-color: #ff5e5b;
+}
+
+.button-red:hover{
+    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
+}
+
+.button-lightBlue{
+    background-color: #3581B8;
+}
+
+.button-lightBlue:hover{
+    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
+}
+
+.button-yellow{
+    background-color: #f4b860;
+}
+
+.button-yellow:hover{
+    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
+}
+
+.button-orange{
+    background-color: #EB5E28;
+}
+
+.button-orange:hover{
+    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
+}
+
+.button-green{
+    background-color: #588157;
+}
+
+.button-green:hover{
+    box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
+}
+
+.header-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.alert-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.alert{
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.alert-success{
+    background-color: #588157;
+}
+
+.alert-danger{
+    background-color: #AA2E30;
+}
+
+.alert-notice{
+    background-color: rgba(231, 236, 239, 0.4);
+}

@@ -1,0 +1,27 @@
+.footer-page{
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: auto;
+    border-top: #fcfaf9 solid 1px;
+}
+
+.footer-box{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-box{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon-small{
+    font-size: 1.5rem;
+}
+
+.color-white{
+    color: #fcfaf9;
+}

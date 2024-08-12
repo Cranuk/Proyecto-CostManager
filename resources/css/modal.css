@@ -1,0 +1,50 @@
+/* Estilos al modal NOTE: las primeras clases son eventos de css para darle estilos al entrar y salir el modal*/
+.section-modal{
+    display: inline-flex;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0b0c08bd; /*FIXME: verificar luego que significa bd luego de poner el codigo hexadecimal en CSS*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+.box-modal{
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80%;
+    background-color: #003849;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.form-modal{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.open-modal{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 1s;
+}
+
+.hide-modal{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+.button-exit-modal{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
