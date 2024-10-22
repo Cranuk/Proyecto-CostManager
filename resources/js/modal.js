@@ -5,7 +5,7 @@ window.addEventListener('load', function(){
         }
     });
 
-    var url = "http://laravelgestorgastos/";
+    var url = "http://progestorgastoslaravel/";
     var hacerFiltroEn = "";
 
     $('#filter-button').on('click', function(){

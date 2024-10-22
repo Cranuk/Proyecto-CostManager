@@ -10,7 +10,7 @@ class FilterController extends Controller
 {
     public function date(){
         $currentYear = Carbon::now()->year; // Año actual
-        $startYear = $currentYear - 5; // NOTE: iniciar desde 20 años atrás
+        $startYear = $currentYear - 5; // NOTE: iniciar desde 5 años atrás
         $endYear = $currentYear + 5; // NOTE: hasta 5 años adelante
         
         $years = range($startYear, $endYear); // NOTE: Generamos los anios entre esos rangos
@@ -28,7 +28,7 @@ class FilterController extends Controller
     }
 
     public function filter(Request $request){
-        $data = $request -> input('table');
+        $data = $request -> input('table'); // NOTE: indica a que tabla se realiza la busqueda
         $month = $request -> input('month');
         $year = $request -> input('year');
 

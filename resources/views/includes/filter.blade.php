@@ -4,7 +4,7 @@
             @csrf
             <input type="hidden" id="table" name="table">
             <label for="month" class="label-text">Mes</label>
-            <select name="month" id="month" class="input-select">Mes:</select>
+            <select name="month" id="month" class="input-select"></select>
 
             <div class="space-10"></div>
 
