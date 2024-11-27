@@ -38,6 +38,7 @@
     <div class="space-10"></div>
 
     @if($count > 0)
+    <div class="table-responsive">
         <table>
             <thead>
                 <tr>
@@ -77,6 +78,8 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+
     @else
         <div class="alert-box">
             <div class="alert alert-notice">

@@ -14,6 +14,7 @@ export default defineConfig({
                 'resources/css/footer.css',
                 'resources/js/app.js',
                 'resources/js/modal.js',
+                'resources/js/script.js',
                 ],
                 refresh: true,
                 publicDir: 'public',

@@ -24,6 +24,7 @@
     </div>
 
     @if($balances['balancePositive'] > 0)
+    <div class="table-responsive">
         <table>
             <thead>
                 <tr>
@@ -46,6 +47,8 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
     @else
         <div class="alert-box">
             <div class="alert alert-notice">

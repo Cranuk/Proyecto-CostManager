@@ -14,39 +14,33 @@
         <title>CostManager - @yield('title')</title>
         @vite([
             'resources/css/app.css',
-            'resources/css/global.css',
-            'resources/css/menu.css',
-            'resources/css/forms.css',
-            'resources/css/tables.css',
-            'resources/css/footer.css',
-            'resources/css/modal.css',
             'resources/js/app.js',
-            'resources/js/modal.js',
             ])
     </head>
     <body>
         @include('includes.header')
-
         @yield('content-main')
 
-        <div class="container">
-            <div class="container-content">
-                <!--Categories-->
-                @yield('content-category')
-                @yield('content-create-category')
-
-                <!--Expenses-->
-                @yield('content-expense')
-                @yield('content-create-expense')
-
-                <!--Revenues-->
-                @yield('content-revenue')
-                @yield('content-create-revenue')
-
-                <!--Modal-->
-                @include('includes.filter')
+        <main>
+            <div class="container">
+                <div class="container-content">
+                    <!--Categories-->
+                    @yield('content-category')
+                    @yield('content-create-category')
+    
+                    <!--Expenses-->
+                    @yield('content-expense')
+                    @yield('content-create-expense')
+    
+                    <!--Revenues-->
+                    @yield('content-revenue')
+                    @yield('content-create-revenue')
+    
+                    <!--Modal-->
+                    @include('includes.filter')
+                </div>
             </div>
-        </div>
+        </main>
 
         @include('includes.footer')
     </body>

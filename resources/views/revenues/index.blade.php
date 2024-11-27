@@ -38,45 +38,48 @@
 
     <div id="container-table">
         @if($count > 0)
-        <table>
-            <thead>
-                <tr>
-                    <th>Categoria</th>
-                    <th>Descripcion</th>
-                    <th>Monto</th>
-                    <th>Mes</th>
-                    <th>Herramientas</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($table as $revenue)
+        <div class="table-responsive">
+            <table>
+                <thead>
                     <tr>
-                        <td>
-                            @foreach($categories as $category)
-                                @if($category->id == $revenue->category_id)
-                                    {{ $category->name }}
-                                @endif
-                            @endforeach
-                        </td>
-                        <td>{{ $revenue->description }}</td>
-                        <td>
-                            @formatCurrency($revenue->amount) <!--NOTE: creamos directiva blade para la funcion helper para formato de moneda -->
-                        </td>
-                        <td><!--NOTE: se pone la fecha que se creo dado que ahora se muestra los gastos solo del mes actual-->
-                            @formatDate($revenue->created_at) <!--NOTE: creamos una directiva de blade para la funcion helper para formato de fecha -->
-                        </td>
-                        <td>
-                            <a href="{{ route('revenueEdit', ['id'=>$revenue->id]) }}">
-                                <i class='bx bxs-edit-alt'></i>
-                            </a>
-                            <a href="{{ route('revenueDelete', ['id'=>$revenue->id]) }}">
-                                <i class='bx bxs-trash-alt'></i>
-                            </a>
-                        </td>
+                        <th>Categoria</th>
+                        <th>Descripcion</th>
+                        <th>Monto</th>
+                        <th>Mes</th>
+                        <th>Herramientas</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach($table as $revenue)
+                        <tr>
+                            <td>
+                                @foreach($categories as $category)
+                                    @if($category->id == $revenue->category_id)
+                                        {{ $category->name }}
+                                    @endif
+                                @endforeach
+                            </td>
+                            <td>{{ $revenue->description }}</td>
+                            <td>
+                                @formatCurrency($revenue->amount) <!--NOTE: creamos directiva blade para la funcion helper para formato de moneda -->
+                            </td>
+                            <td><!--NOTE: se pone la fecha que se creo dado que ahora se muestra los gastos solo del mes actual-->
+                                @formatDate($revenue->created_at) <!--NOTE: creamos una directiva de blade para la funcion helper para formato de fecha -->
+                            </td>
+                            <td>
+                                <a href="{{ route('revenueEdit', ['id'=>$revenue->id]) }}">
+                                    <i class='bx bxs-edit-alt'></i>
+                                </a>
+                                <a href="{{ route('revenueDelete', ['id'=>$revenue->id]) }}">
+                                    <i class='bx bxs-trash-alt'></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
         @else
             <div class="alert-box">
                 <div class="alert alert-notice">
