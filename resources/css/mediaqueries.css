@@ -1,0 +1,5 @@
+@media (max-width: 420px){
+    .container-options > .menu-list{
+        flex-direction: column;
+    }
+}

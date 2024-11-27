@@ -19,11 +19,12 @@
     </head>
     <body>
         @include('includes.header')
-        @yield('content-main')
 
         <main>
             <div class="container">
                 <div class="container-content">
+                    <!--Balances-->
+                    @yield('content-main')
                     <!--Categories-->
                     @yield('content-category')
                     @yield('content-create-category')

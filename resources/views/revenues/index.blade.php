@@ -18,8 +18,6 @@
         </div>
     </div>
 
-    <div class="space-10"></div>
-
     <div class="alert-box">
         @if (session('status'))
             <div class="alert alert-success">
@@ -33,8 +31,6 @@
             </div>
         @endif
     </div>
-
-    <div class="space-10"></div>
 
     <div id="container-table">
         @if($count > 0)
