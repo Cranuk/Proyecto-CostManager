@@ -1,0 +1,51 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    working_dir: /var/www
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/var/www
+    depends_on:
+      - db
+    networks:
+      - costManager
+
+  server:
+    image: nginx:latest
+    container_name: server
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - costManager
+
+  db:
+    image: mysql:8
+    container_name: db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD_ROOT}
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - costManager
+
+volumes:
+  dbdata:
+
+networks:
+  costManager:

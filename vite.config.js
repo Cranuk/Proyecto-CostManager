@@ -2,27 +2,20 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
+    server: {
+        host: '0.0.0.0', // Permite acceder desde fuera del contenedor
+        port: 5173,
+        hmr: {
+            host: '172.20.80.1',
+            protocol: 'ws',
+            port: 5173,
+        },
+    },
     plugins: [
         laravel({
-            input: [
-                'resources/css/app.css',
-                'resources/css/global.css',
-                'resources/css/menu.css',
-                'resources/css/forms.css',
-                'resources/css/tables.css',
-                'resources/css/modal.css',
-                'resources/css/footer.css',
-                'resources/js/app.js',
-                'resources/js/modal.js',
-                'resources/js/script.js',
-                ],
+            input: ['resources/css/app.css','resources/js/app.js'],
                 refresh: true,
                 publicDir: 'public',
             }),
         ],
-        resolve: {
-            alias: {
-                '$': 'jquery'
-            },
-        },
 });
