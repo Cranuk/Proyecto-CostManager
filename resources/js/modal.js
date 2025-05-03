@@ -5,7 +5,7 @@ window.addEventListener('load', function(){
         }
     });
 
-    var url = "http://laravel-gestorgastos/";
+    const url = import.meta.env.VITE_APP_URL;
     var hacerFiltroEn = "";
 
     $('#filter-button').on('click', function(){
@@ -47,7 +47,7 @@ window.addEventListener('load', function(){
 
                 $('#filter-modal').removeClass('hide-modal').addClass('open-modal');
             },
-            error: function(xhr, status, error) {
+            error: function(error) {
                 console.error('Error al cargar los select de fechas:', error);
             }
         });

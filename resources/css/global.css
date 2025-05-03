@@ -78,6 +78,12 @@ ul{
     text-decoration: underline;
 }
 
+.delete-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .button-box{
     display: inline-flex;
     flex-direction: row;

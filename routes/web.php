@@ -16,7 +16,7 @@ Route::get('/', [Controller::class, 'index'])->name('index');
 Route::get('/categories/index', [CategoryController::class, 'index'])->name('category');
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categoryCreate');
 Route::get('/categories/edit/{id}',[CategoryController::class, 'edit'])->name('categoryEdit');
-Route::get('/categories/delete/{id}',[CategoryController::class, 'delete'])->name('categoryDelete');
+Route::delete('/categories/delete/{id}',[CategoryController::class, 'delete'])->name('categoryDelete');
 Route::post('/categories/update',[CategoryController::class,'update'])->name('categoryUpdate');
 Route::post('/categories/save', [CategoryController::class, 'save'])->name('categorySave');
 
@@ -24,7 +24,7 @@ Route::post('/categories/save', [CategoryController::class, 'save'])->name('cate
 Route::get('/expenses/index',[ExpenseController::class, 'index'])->name('expense');
 Route::get('/expenses/create',[ExpenseController::class, 'create'])->name('expenseCreate');
 Route::get('/expenses/edit/{id}',[ExpenseController::class, 'edit'])->name('expenseEdit');
-Route::get('/expenses/delete/{id}',[ExpenseController::class, 'delete'])->name('expenseDelete');
+Route::delete('/expenses/delete/{id}',[ExpenseController::class, 'delete'])->name('expenseDelete');
 Route::post('/expenses/update',[ExpenseController::class,'update'])->name('expenseUpdate');
 Route::post('/expenses/save', [ExpenseController::class, 'save'])->name('expenseSave');
 
@@ -32,7 +32,7 @@ Route::post('/expenses/save', [ExpenseController::class, 'save'])->name('expense
 Route::get('/revenues/index',[RevenueController::class, 'index'])->name('revenue');
 Route::get('/revenues/create',[RevenueController::class, 'create'])->name('revenueCreate');
 Route::get('/revenues/edit/{id}',[RevenueController::class, 'edit'])->name('revenueEdit');
-Route::get('/revenues/delete/{id}',[RevenueController::class, 'delete'])->name('revenueDelete');
+Route::delete('/revenues/delete/{id}',[RevenueController::class, 'delete'])->name('revenueDelete');
 Route::post('/revenues/update',[RevenueController::class,'update'])->name('revenueUpdate');
 Route::post('/revenues/save', [RevenueController::class, 'save'])->name('revenueSave');
 

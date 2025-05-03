@@ -15,20 +15,6 @@
         </div>    
     </div>
 
-    <div class="alert-box">
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        @if (session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
-    </div>
-
     @if( $count > 0)
     <div class="table-responsive">
         <table>
@@ -55,9 +41,13 @@
                             <a href="{{ route('categoryEdit', ['id'=>$category->id]) }}">
                                 <i class='bx bxs-edit-alt'></i>
                             </a>
-                            <a href="{{ route('categoryDelete', ['id'=>$category->id]) }}">
-                                <i class='bx bxs-trash-alt'></i>
-                            </a>
+                            <form action="{{ route('categoryDelete', $category->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="delete-button">
+                                    <i class='bx bxs-trash-alt'></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
