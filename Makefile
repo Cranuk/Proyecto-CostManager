@@ -45,5 +45,5 @@ horizon:
 
 # Utilidades
 status:
-	docker ps --filter "name=Proyecto-CostManager" --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
+	docker ps --filter "name=manager" --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Status}}"
 

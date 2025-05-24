@@ -29,7 +29,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Establecer directorio de trabajo
-WORKDIR /var/www
+WORKDIR /var/www/html
 
 # Copiar los archivos del proyecto
 COPY . .
