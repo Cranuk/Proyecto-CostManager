@@ -10,6 +10,8 @@
         "vite": "^6.3.4"
     },
     "dependencies": {
-        "jquery": "^3.7.1"
+        "@pablotheblink/flashyjs": "^1.0.5",
+        "jquery": "^3.7.1",
+        "micromodal": "^0.6.1"
     }
 }

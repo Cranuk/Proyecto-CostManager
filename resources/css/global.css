@@ -1,97 +1,105 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #f9f7f3;
+    color: #333333;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
 }
 
-body{
-    background-color: #003849;    
+body {
+    background-color: #f9f7f3;
 }
 
-main{
+main {
     min-height: 90vh;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.space-5{
+.space-5 {
     margin-top: 5px;
 }
 
-.space-10{
+.space-10 {
     margin-top: 10px;
 }
 
-.center{
+.space-20 {
+    margin-top: 20px;
+}
+
+.space-30 {
+    margin-top: 30px;
+}
+
+.center {
     text-align: center;
 }
 
-.icon-head{
+.icon-head {
     display: block;
     text-align: center;
     margin-bottom: 5px;
 }
 
-.icon-small{
+.icon-small {
     font-size: 1.5rem;
 }
 
-.icon-medium{
+.icon-medium {
     font-size: 2rem;
 }
 
-.icon-big{
+.icon-big {
     font-size: 3rem;
 }
 
-.container{
+.container {
     width: 100%;
 }
 
-.container-content{
+.container-content {
     padding: 0 10px;
 }
 
-.title-web{
+.title-web {
     display: flex;
     align-items: center;
 }
 
-.title{
+.title {
     font-size: 2rem;
 }
 
-.subtitle{
+.subtitle {
     font-size: 1.6rem;
 }
 
-.underlined{
+.underlined {
     text-decoration: underline;
 }
 
-.delete-button{
+.delete-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.button-box{
+.button-box {
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
 }
 
-.buttons{
+.buttons {
     width: fit-content;
     padding: 10px;
     color: #fcfaf9;
@@ -103,61 +111,61 @@ ul{
     transition: box-shadow 0.3s;
 }
 
-.button-red{
+.button-red {
     background-color: #ff5e5b;
 }
 
-.button-red:hover{
+.button-red:hover {
     box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
 }
 
-.button-lightBlue{
+.button-lightBlue {
     background-color: #3581B8;
 }
 
-.button-lightBlue:hover{
+.button-lightBlue:hover {
     box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
 }
 
-.button-yellow{
+.button-yellow {
     background-color: #f4b860;
 }
 
-.button-yellow:hover{
+.button-yellow:hover {
     box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
 }
 
-.button-orange{
+.button-orange {
     background-color: #EB5E28;
 }
 
-.button-orange:hover{
+.button-orange:hover {
     box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
 }
 
-.button-green{
+.button-green {
     background-color: #588157;
 }
 
-.button-green:hover{
+.button-green:hover {
     box-shadow: 0 5px 15px rgba(209, 207, 207, 0.5);
 }
 
-.header-page{
+.header-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.header-section{
+.header-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 }
 
-.alert-box{
+.alert-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,20 +173,12 @@ ul{
     margin-top: 20px;
 }
 
-.alert{
+.alert {
     width: fit-content;
     padding: 15px;
     border-radius: 5px;
 }
 
-.alert-success{
-    background-color: #588157;
-}
-
-.alert-danger{
-    background-color: #AA2E30;
-}
-
-.alert-notice{
+.alert-notice {
     background-color: rgba(231, 236, 239, 0.4);
 }

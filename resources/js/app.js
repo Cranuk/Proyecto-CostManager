@@ -6,3 +6,5 @@ window.$ = window.jQuery = $;
 // ANCHOR: mis archivos js
 import './modal';
 import './script';
+import './filter';
+import './alert';

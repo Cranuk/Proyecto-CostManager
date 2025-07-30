@@ -1,50 +1,124 @@
-/* Estilos al modal NOTE: las primeras clases son eventos de css para darle estilos al entrar y salir el modal*/
-.section-modal{
-    display: inline-flex;
-    text-align: center;
+/* Estilos al modal*/
+/* NOTE: las primeras clases son eventos de css para darle estilos al entrar y salir el modal*/
+.modal {
     position: fixed;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    background-color: #0b0c08bd; /*FIXME: verificar luego que significa bd luego de poner el codigo hexadecimal en CSS*/
+    z-index: 99999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.box-modal{
-    position: relative;
-    margin: auto;
-    width: 90%;
-    max-width: 600px;
-    max-height: 80%;
-    background-color: #003849;
-    border-radius: 15px;
-    padding: 20px;
-}
-
-.form-modal{
-    display: inline-flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.open-modal{
+.modal[aria-hidden="false"] {
     opacity: 1;
-    pointer-events: unset;
-    transition: opacity 1s;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-.hide-modal{
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s;
+/* Fondo oscuro semi-transparente con blur */
+.modal__overlay {
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
 }
 
-.button-exit-modal{
-    position: absolute;
-    top: 0;
-    right: 20px;
+/* Contenedor modal */
+.modal__container {
+    background-color: #222;
+    color: #eee;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 400px;
+    max-width: 90vw;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: modalFadeIn 0.3s ease forwards;
+    outline: none;
+}
+
+/* Header */
+.modal__header {
+    margin-bottom: 20px;
+}
+
+.modal__title {
+    font-weight: 700;
     font-size: 1.5rem;
+    color: #4caf50;
+    margin: 0;
+}
+
+/* Contenido */
+.modal__content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Footer con botones */
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Botones */
+.modal__footer button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    min-width: 100px;
+}
+
+/* Botón Confirmar - estilo flashy verde */
+#confirm-delete {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.5);
+}
+
+#confirm-delete:hover {
+    background-color: #43a047;
+    box-shadow: 0 8px 16px rgba(67, 160, 71, 0.7);
+}
+
+/* Botón Cancelar - estilo claro y sutil */
+button[data-micromodal-close] {
+    background-color: transparent;
+    color: #aaa;
+    border: 2px solid transparent;
+}
+
+button[data-micromodal-close]:hover {
+    color: #ddd;
+    border-color: #aaa;
+}
+
+/* Animación aparición modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
